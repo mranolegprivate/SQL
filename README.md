@@ -8,11 +8,5 @@
   
   [Задание и решение 1](https://github.com/mranolegprivate/SQL/blob/main/HW_1.sql "Решение 1")
   
-  ###  SQL home work 2
-  
-[Задание и решение 1](https://github.com/mranolegprivate/SQL/blob/main/HW_1.sql "Решение 1")
-  
-  ###  SQL home work 3
-  
-[Задание и решение 1](https://github.com/mranolegprivate/SQL/blob/main/HW_1.sql "Решение 1")
+
   
