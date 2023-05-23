@@ -11,6 +11,11 @@ Pass: 123
 
 
  1. Вывести всех работников чьи зарплаты есть в базе, вместе с зарплатами.
+	select employee_name, monthly_salary
+	from (
+	(employee_salary e_s inner join employees e
+	on e_s.employee_id = e.id) inner join salary s 
+	on e_s.salary_id = s.id)
  
  2. Вывести всех работников у которых ЗП меньше 2000.
  
