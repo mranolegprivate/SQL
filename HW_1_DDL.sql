@@ -195,3 +195,4 @@ VALUES (1000),
 
 ![roles](https://github.com/mranolegprivate/SQL/blob/main/img/Screenshot_15.png 'roles')
 ![roles_employee](https://github.com/mranolegprivate/SQL/blob/main/img/Screenshot_16.png 'roles_employee')
+<img src = "https://github.com/mranolegprivate/anoleg_rezume/blob/main/assets/rezume.jpg?raw=true"/>
