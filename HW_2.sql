@@ -24,8 +24,18 @@ Pass: 123
 	where monthly_salary < 2000;
  
  3. Вывести все зарплатные позиции, но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
+ 	select monthly_salary, employee_name
+	from ((employee_salary e_s 
+	left join employees e on e_s.employee_id = e.id) 
+	left join salary s on e_s.salary_id = s.id) 
+	where employee_name is null
  
  4. Вывести все зарплатные позиции  меньше 2000 но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
+ 	select monthly_salary, employee_name
+	from ((employee_salary e_s
+	left join employees e on e_s.employee_id = e.id)
+	left join salary s on e_s.salary_id = s.id) 
+	where employee_name is null and monthly_salary < 2000;
  
  5. Найти всех работников кому не начислена ЗП.
  
