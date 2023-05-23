@@ -12,7 +12,7 @@ SQL_DDL
 	employee_name Varchar(50) not null
 );
 
-2)Наполнить таблицу employee 70 строками.
+2) Наполнить таблицу employee 70 строками.
 INSERT INTO employees (employee_name)
 VALUES ('Reggie Batey'), 
 ('Clara Poore'), 
@@ -97,7 +97,7 @@ create table salary(
 	monthly_salary Int not null
 );
 
-Наполнить таблицу salary 15 строками:
+4) Наполнить таблицу salary 15 строками:
 - 1000
 - 1100
 - 1200
@@ -193,6 +193,98 @@ VALUES (1000),
 			(69, 20);
 
 
-https://github.com/mranolegprivate/SQL/blob/main/img/Screenshot_15.png
-https://github.com/mranolegprivate/SQL/blob/main/img/Screenshot_16.png
+Таблица roles
 
+7) Создать таблицу roles
+- id. Serial  primary key,
+- role_name. int, not null, unique
+
+Ответ:
+	create table roles(
+	id Serial  primary key,
+	role_name Int not null unique
+);
+
+
+8) Поменять тип столба role_name с int на varchar(30)
+ALTER TABLE roles 
+CHANGE role_name role_name VARCHAR(30) NOT NULL;
+
+9) Наполнить таблицу roles 20 строками:
+	INSERT INTO roles(role_name)
+	VALUES 		('Junior Python developer'),
+			('Middle Python developer'),
+			('Senior Python developer'),
+			('Junior Java developer'),
+			('Middle Java developer'),
+			('Senior Java developer'),
+			('Junior JavaScript developer'),
+			('Middle JavaScript developer'),
+			('Senior JavaScript developer'),
+			('Junior Manual QA engineer'),
+			('Middle Manual QA engineer'),
+			('Senior Manual QA engineer'),
+			('Project Manager'),
+			('Designer'),
+			('HR'),
+			('CEO'),
+			('Sales manager'),
+			('Junior Automation QA engineer'),
+			('Middle Automation QA engineer'),
+			('Senior Automation QA engineer');
+
+Таблица roles_employee
+
+10) Создать таблицу roles_employee
+- id. Serial  primary key,
+- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
+- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
+
+Ответ:   CREATE TABLE roles_employee(
+ 	 id serial PRIMARY KEY,
+ 	 employees_id INT NOT null unique,
+ 	 roleshw_id INT NOT null);
+
+
+11) Наполнить таблицу roles_employee 40 строками:
+INSERT INTO roles_employee(employees_id, rolesHW_id)
+		VALUES  (7,2),
+			(20,4),
+			(3,1),
+			(5,13),
+			(23,10),
+			(11,18),
+			(10,9),
+			(22,13),
+			(21,3),
+			(34,4),
+			(36,13),
+			(68,15),
+			(64,7),
+			(69,8),
+			(67,9),
+			(45,20),
+			(40,19),
+			(41,17),
+			(42,16),
+			(43,9),
+			(35,4),
+			(37,3),
+			(25,8),
+			(55,6),
+			(66,17),
+			(29,7),
+			(46,11),
+			(26,2),
+			(28,11),
+			(32,12),
+			(39,15),
+			(49,20),
+			(52,5),
+			(44,1),
+			(27,8),
+			(4,7),
+			(6,11),
+			(9,9),
+			(63,5),
+			(12,8);
