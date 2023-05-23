@@ -13,7 +13,7 @@ SQL_DDL
 );
 
 2)Наполнить таблицу employee 70 строками.
-INSERT INTO employees (name)
+INSERT INTO employees (employee_name)
 VALUES ('Reggie Batey'), 
 ('Clara Poore'), 
 ('Tammy Galindo'), 
