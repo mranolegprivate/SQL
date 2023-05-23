@@ -20,7 +20,7 @@ Pass: 123
  2. Вывести всех работников у которых ЗП меньше 2000.
  	select employee_name, monthly_salary
 	from employees 
-	inner join salary on employees.id = salary.id
+	join salary on employees.id = salary.id
 	where monthly_salary < 2000;
  
  3. Вывести все зарплатные позиции, но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
