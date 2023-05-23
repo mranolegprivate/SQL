@@ -193,3 +193,5 @@ VALUES (1000),
 			(69, 20);
 
 
+[roles](https://github.com/mranolegprivate/SQL/blob/main/img/Screenshot_15.png 'roles')
+[roles_employee](https://github.com/mranolegprivate/SQL/blob/main/img/Screenshot_16.png 'roles_employee')
