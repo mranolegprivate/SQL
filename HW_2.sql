@@ -11,36 +11,43 @@ Pass: 123
 
 
  1. Вывести всех работников чьи зарплаты есть в базе, вместе с зарплатами.
-	select employee_name, monthly_salary
-	from (
-	(employee_salary es inner join employees e
-	on es.employee_id = e.id) inner join salary s 
-	on es.salary_id = s.id)
+	SELECT employee_name, monthly_salary
+	FROM (
+	(employee_salary es 
+	JOIN employees e ON es.employee_id = e.id) 
+	JOIN salary s ON es.salary_id = s.id)
  
  2. Вывести всех работников у которых ЗП меньше 2000.
- 	select employee_name, monthly_salary
-	from employees 
-	join salary on employees.id = salary.id
-	where monthly_salary < 2000;
+ 	SELECT employee_name, monthly_salary
+	FROM employees 
+	JOIN salary on employees.id = salary.id
+	WHERE monthly_salary < 2000;
  
  3. Вывести все зарплатные позиции, но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
- 	select monthly_salary, employee_name
-	from ((employee_salary e_s 
-	left join employees e on e_s.employee_id = e.id) 
-	left join salary s on e_s.salary_id = s.id) 
-	where employee_name is null
+ 	SELECT monthly_salary, employee_name
+	FROM ((employee_salary e_s 
+	LEFT JOIN employees e on e_s.employee_id = e.id) 
+	LEFT JOIN salary s on e_s.salary_id = s.id) 
+	WHERE employee_name is NULL
  
  4. Вывести все зарплатные позиции  меньше 2000 но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
- 	select monthly_salary, employee_name
-	from ((employee_salary e_s
-	left join employees e on e_s.employee_id = e.id)
-	left join salary s on e_s.salary_id = s.id) 
-	where employee_name is null and monthly_salary < 2000;
+ 	SELECT monthly_salary, employee_name
+	FROM ((employee_salary e_s
+	LEFT JOIN employees e on e_s.employee_id = e.id)
+	LEFT JOIN salary s on e_s.salary_id = s.id) 
+	WHERE employee_name is NULL and monthly_salary < 2000;
  
  5. Найти всех работников кому не начислена ЗП.
+ 	SELECT employee_name, monthly_salary
+	FROM employees e
+	LEFT JOIN salary s on e.id = s.id
+	WHERE monthly_salary is NULL
  
  6. Вывести всех работников с названиями их должности.
- 
+ 	select employee_name, role_name
+	from employees e
+	join roles r on e.id = r.id
+
  7. Вывести имена и должность только Java разработчиков.
  
  8. Вывести имена и должность только Python разработчиков.
