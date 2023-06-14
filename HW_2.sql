@@ -1,4 +1,4 @@
-SQL HomeWork 2. Joins
+SQL HomeWork 2. JOIN
 
 Подключится к 
 Host: 159.69.151.133
